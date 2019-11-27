@@ -1,0 +1,45 @@
+
+
+            $contPerct = 0;
+
+           $retorna =[];
+            foreach($final as $key30 => $itemPesq){
+
+                if( $cont != 0){
+
+                    $retorna[$key30]= $itemPesq['pts'];
+            
+                }else{
+
+                    if($itemPesq['perct'] > 12  ){
+
+
+                        $retorna[$key30]= $itemPesq['perct'];
+
+                    }else{
+
+                        $contPerct ++;
+
+                    }
+                }
+
+
+
+            }
+
+
+            if($contPerct == sizeof($retorna) and $cont != 0){
+              
+                //echo "sim";
+                return false;
+            
+            }else{
+
+                //echo "nao";
+                    return $retorna;
+
+            }
+
+            //print_r($quebraFind);
+
+        }
